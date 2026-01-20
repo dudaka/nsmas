@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Robustness Analysis: Base vs NoOp Performance}
+\label{tab:robustness}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{System} & \textbf{Base \%} & \textbf{NoOp \%} & \textbf{$\Delta$} & \textbf{RRR} \\
+\midrule
+NS-MAS Bandit Cold & 65.52% & 64.08% & 1.44% & 0.978 \\
+GPT-4o CoT & 58.79% & 56.21% & 2.58% & 0.956 \\
+NS-MAS Fixed Slow & 79.50% & 75.73% & 3.77% & 0.953 \\
+NS-MAS Random & 67.65% & 63.43% & 4.22% & 0.938 \\
+GPT-4o-mini CoT & 44.61% & 41.49% & 3.12% & 0.930 \\
+\bottomrule
+\end{tabular}
+\end{table}
