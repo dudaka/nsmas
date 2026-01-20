@@ -55,3 +55,4 @@ results/checkpoints/
 *.tmp
 *.temp
 *.log
+paper/
