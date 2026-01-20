@@ -1,13 +1,8 @@
 # NS-MAS: Neuro-Symbolic Multi-Agent System for Robust Mathematical Reasoning
 
-<!-- [![Paper](https://img.shields.io/badge/Paper-EXTRAAMAS%202026-blue)](paper/main.pdf)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This repository contains the source code, data, and results for reproducing the experiments in:
-
-> **Neuro-Symbolic Verification for Robust Mathematical Reasoning: From Catastrophic Fragility to Trustworthy Stability**
->
-> EXTRAAMAS 2026 (8th International Workshop on Explainable, Trustworthy, and Responsible AI) -->
+A neuro-symbolic approach to robust mathematical reasoning that combines LLM generation with formal verification using Answer Set Programming (ASP).
 
 ## Key Results
 
@@ -218,17 +213,6 @@ $$RRR = \frac{Accuracy_{perturbed}}{Accuracy_{clean}}$$
 - RRR = 1.0: Perfect robustness
 - Literature SOTA: RRR ≈ 0.35 (65% drop)
 - NS-MAS: RRR = 0.953 (3.77% drop)
-
-## Citation
-
-```bibtex
-@inproceedings{nsmas2026,
-  title={Neuro-Symbolic Verification for Robust Mathematical Reasoning: From Catastrophic Fragility to Trustworthy Stability},
-  author={Author Names},
-  booktitle={EXTRAAMAS 2026},
-  year={2026}
-}
-```
 
 ## License
 
