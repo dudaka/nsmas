@@ -1,6 +1,5 @@
 # NS-MAS: Neuro-Symbolic Multi-Agent System for Robust Mathematical Reasoning
 
-[![Paper](https://img.shields.io/badge/Paper-EXTRAAMAS%202026-blue)](paper/main.pdf)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 This repository contains the source code, data, and results for reproducing the experiments in:
@@ -11,13 +10,14 @@ This repository contains the source code, data, and results for reproducing the 
 
 ## Key Results
 
-| System | Base | NoOp | RRR | vs SOTA |
-|--------|------|------|-----|---------|
-| NS-MAS Fixed Slow | **79.50%** | **75.73%** | **0.953** | 17× |
-| GPT-4o CoT | 58.79% | 56.21% | 0.956 | 17× |
-| Literature Baseline | - | - | ~0.35 | 1× |
+| System              | Base       | NoOp       | RRR       | vs SOTA |
+| ------------------- | ---------- | ---------- | --------- | ------- |
+| NS-MAS Fixed Slow   | **79.50%** | **75.73%** | **0.953** | 17×     |
+| GPT-4o CoT          | 58.79%     | 56.21%     | 0.956     | 17×     |
+| Literature Baseline | -          | -          | ~0.35     | 1×      |
 
 **Main Findings:**
+
 - +20.71% accuracy improvement over GPT-4o Chain-of-Thought
 - 17× better robustness retention ratio (RRR) than SOTA literature baseline
 - Symbolic verification acts as a "semantic firewall" against distractor injection
@@ -53,7 +53,6 @@ nsmas-reproduce/
 │   ├── pca_50.pkl          # PCA model (384→50 dims)
 │   └── warm_policy_explore.vw  # Pre-trained VW policy
 ├── tests/                  # Unit tests
-├── paper/                  # LaTeX source and PDF
 └── environment.yml         # Conda environment
 ```
 
@@ -78,6 +77,7 @@ cp .env.example .env
 ```
 
 Required:
+
 - `OPENAI_API_KEY` - For GPT-4o experiments
 
 ### 3. Verify Installation
@@ -130,12 +130,12 @@ python -m src.experiments.pilot --problems 500 --data-dir output --results-dir r
 
 The GSM-Symbolic dataset is derived from Apple's [ml-gsm-symbolic](https://github.com/apple/ml-gsm-symbolic) templates.
 
-| Variant | Problems | Description |
-|---------|----------|-------------|
-| Base | 2,439 | Standard problems |
-| P1 | 1,550 | Increased difficulty |
-| P2 | 566 | Highest difficulty |
-| NoOp | 2,439 | Base + distractor sentences |
+| Variant | Problems | Description                 |
+| ------- | -------- | --------------------------- |
+| Base    | 2,439    | Standard problems           |
+| P1      | 1,550    | Increased difficulty        |
+| P2      | 566      | Highest difficulty          |
+| NoOp    | 2,439    | Base + distractor sentences |
 
 To regenerate the dataset:
 
